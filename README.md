@@ -2,7 +2,7 @@
 ## In order to run this function, make sure the working directory is set to the path of files to be read.
 
 ## read a series of dataset
-  ## First read the dataset for test and trainning respectively
+  ### First read the dataset for test and trainning respectively
   ## For testing dataset, it includes the file of 'subject_test.txt','X_test.txt','y_test.txt'
   ## For trainning dataset, it includes the file of 'subject_train.txt','X_train.txt','y_train.txt'
 
