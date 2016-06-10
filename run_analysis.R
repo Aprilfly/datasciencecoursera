@@ -59,7 +59,7 @@ run_analysis<-function(){
   mean_std[82]$activity[mean_std[82]$activity==6]<-"Laying"
   
   ##obtain the average of each measurements by each activities and each subjects
-  result<-ddply(mean_std[2:82],.(subject,activity),numcolwise(mean))
+  result<-ddply(mean_std[2:82],.(subject,activity),colwise(mean))
   write.table(result,"E:/Cousera-Data Science/DataClean_finalProject/result.txt")
   
   result
