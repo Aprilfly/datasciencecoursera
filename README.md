@@ -22,12 +22,5 @@
 
 ##Uses descriptive activity names to name the activities in the data set
 
-##obtain the average of each measurements by the factor of  activities
-##store the result in the variable of 'aver_each_activity'
-
-##obtain the average of each measuremnts by the factor of subjects
-##store the result in the variable of 'aver_each_subject'
-
-##store the 2 results together into the variable of 'result'
-## the output is a data frame called 'output'
-## the variable of 'output' is the return value
+##obtain the average of each measurements by the factor of  activities and subjects
+##the return value contains 180 rows in totall due to 30 subjects and 6 activity each.
