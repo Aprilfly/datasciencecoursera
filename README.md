@@ -9,8 +9,8 @@
   ## One more dataset need to be read is 'features.txt'
 
 ##Data Preprocess
- ##Merge the dataframe 'subject_test','X_test','y_test' together
- ##Merge the dataframe 'subject_train','X_train','y_train' together
+  ##Merge the dataframe 'subject_test','X_test','y_test' together
+  ##Merge the dataframe 'subject_train','X_train','y_train' together
  
 ##name  each variable in the testing and training data with appropriate labels respectively
 
