@@ -1,4 +1,7 @@
 run_analysis<-function(){
+
+  install.packages("plyr")
+  library("plyr"
   ##Import the testing data,including the file of 'subject_test.txt','X_test.txt','y_test.txt'
   setwd("E:/Cousera-Data Science/DataClean_finalProject/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test")
   ##Store the corresponding data into the variable of 'subject_test','X_test','y_test'
@@ -55,22 +58,12 @@ run_analysis<-function(){
   mean_std[82]$activity[mean_std[82]$activity==1]<-"Walking"
   mean_std[82]$activity[mean_std[82]$activity==6]<-"Laying"
   
-  ##obtain the average of each measurements by each activities
-  ##store the result in the variable of 'aver_each_activity'
-  factor1<-factor(mean_std$activity)
-  aver_each_activity<-by(mean_std[3:81],factor1,colMeans)
+  ##obtain the average of each measurements by each activities and each subjects
+  result<-ddply(mean_std[2:82],.(subject,activity),numcolwise(mean))
+  write.table(result,"E:/Cousera-Data Science/DataClean_finalProject/result.txt")
   
-  ##obtain the average of each measuremnts by each subjects
-  ##store the result in the variable of 'aver_each_subject'
-  factor2<-factor(mean_std$subject)
-  aver_each_subject<-by(mean_std[3:81],factor2,colMeans)
+  result
   
-  ##store the 2 results together into the variable of 'result'
-  result<-c(aver_each_subject,aver_each_activity)
-  ## the output is a data frame called 'output'
-  output<-data.frame(result)
-  ## the variable of 'output' is the return value
-  output
   
   
 }
